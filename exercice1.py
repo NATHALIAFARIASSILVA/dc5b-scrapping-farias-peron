@@ -10,8 +10,13 @@ for country in soup.find_all('div', class_='col-md-4 country'):
   pays = country.find('h3', class_='country-name').text
   pays_espace = pays.lstrip()
 
+  capitale = country.find('span', class_='country-capital').text
+  population = country.find('span', class_='country-population').text
+  area = country.find('span', class_='country-area').text
+
   print(pays_espace)
-  print(country.find('span', class_='country-capital').text)
-  print(country.find('span', class_='country-population').text)
-  print(country.find('span', class_='country-area').text)
+  print(capitale)
+  print(population)
+  print(area)
   print("\n")
+
